@@ -1,7 +1,7 @@
 /**
  * Riya Pizza Jawa - Main Application Script
  * Location: Riya Pizza Jawa, F588+G87, Jawa Rd, Java, Haryana 127310
- * Phone: 8295248886 | Service Status: Unavailable via Web
+ * Service Status: Paused
  */
 
 // Global State
@@ -41,9 +41,15 @@ function populateShopInfo() {
   // Update Phone Link placeholders
   const phoneEls = document.querySelectorAll(".shop-phone");
   phoneEls.forEach(el => {
-    el.textContent = SHOP_CONFIG.phone;
+    el.textContent = SHOP_CONFIG.phone || "Service Paused";
     if (el.tagName === "A") {
-      el.href = `tel:${SHOP_CONFIG.phoneRaw}`;
+      if (SHOP_CONFIG.phoneRaw) {
+        el.href = `tel:${SHOP_CONFIG.phoneRaw}`;
+      } else {
+        el.removeAttribute("href");
+        el.style.pointerEvents = "none";
+        el.style.cursor = "default";
+      }
     }
   });
 

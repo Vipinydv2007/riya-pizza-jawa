@@ -1,7 +1,7 @@
 /**
  * Riya Pizza Jawa - Data & Configuration File
  * Location: Riya Pizza Jawa, F588+G87, Jawa Rd, Java, Haryana 127310
- * Owner: Nikku | Phone / WhatsApp: 8295248886
+ * Owner: Nikku
  */
 
 const SHOP_CONFIG = {
@@ -13,17 +13,18 @@ const SHOP_CONFIG = {
   shortLocation: "Jawa Rd, Java, Haryana",
   pincode: "127310",
   
-  // Service Availability Flag (Set to false to display Service Unavailable via Web)
+  // Service Availability Flag (Set to false to display Service Paused / Temporarily Closed)
   isServiceAvailable: false,
-  serviceUnavailableMessage: "Online ordering is currently unavailable via web. Please call or WhatsApp 8295248886 directly to place your order!",
+  serviceUnavailableMessage: "Service is currently paused. We are temporarily not accepting online or phone orders at this time.",
   
-  // Phone & WhatsApp details
-  phone: "+91 82952 48886",          // Display phone number
-  phoneRaw: "918295248886",            // Raw phone number for tel: links
-  whatsappNumber: "918295248886",     // WhatsApp number (8295248886)
+  // Phone & WhatsApp details (Phone number hidden / service paused)
+  phone: "Service Paused",           // Display phone status
+  phoneRaw: "",                       // Raw phone number for tel: links
+  whatsappNumber: "",                 // WhatsApp number
+  hidePhone: true,                    // Hide phone number across site
   
   // UPI Payment Details
-  upiId: "8295248886@upi",             // Easily editable UPI ID
+  upiId: "Service Paused",            // Easily editable UPI ID
   upiName: "Riya Pizza Jawa",
   
   // Timing & Delivery details
@@ -37,7 +38,7 @@ const SHOP_CONFIG = {
   socials: {
     instagram: "https://instagram.com/riyapizzajawa",
     facebook: "https://facebook.com/riyapizzajawa",
-    whatsapp: "https://wa.me/918295248886",
+    whatsapp: "#",
     maps: "https://www.google.com/maps/search/?api=1&query=Riya+Pizza+Jawa+F588%2BG87+Jawa+Rd+Java+Haryana+127310"
   },
   
